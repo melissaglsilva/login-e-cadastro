@@ -11,15 +11,15 @@
 </head>
 
 <body>
-  <main class="card">
+  <div class="container login">
     <form action="#">
       <h2>Login</h2>
       <div class="input-box">
-        <input type="text" id="email-login" placeholder="E-mail" required>
+        <input type="email" class="email" placeholder="E-mail" title="" required oninvalid="this.setCustomValidity('Campo requerido')">
         <i class="fa-solid fa-envelope"></i>
       </div>
       <div class="input-box">
-        <input type="password" id="password-login" placeholder="Senha" required minlength="6" maxlength="20">
+        <input type="password" class="password" placeholder="Senha" title="" required minlength="6" maxlength="20">
         <i class="fa-solid fa-lock"></i>
       </div>
       <div class="wrap-info">
@@ -27,10 +27,32 @@
         <a href="#">Esqueci a senha</a>
       </div>
       <button type="submit">Logar</button>
-      <!-- <input type="submit" id=""> -->
-      <p>Não tem conta?<a href="">Cadastre-se</a></p>
+      <p class="register">Não tem conta? <a href="#">Cadastre-se</a></p>
     </form>
-  </main>
+  </div>
+  <div class="container registration">
+    <form action="#">
+      <h2>Cadastro</h2>
+      <div class="input-box">
+        <input type="text" class="full-name" placeholder="Nome completo" title="" required>
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="input-box">
+        <input type="email" class="email" placeholder="E-mail" title="" required>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="input-box">
+        <input type="password" class="password" placeholder="Senha" title="" required minlength="6" maxlength="20">
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <div class="wrap-info">
+        <label><input type="checkbox">Li e concordo com a <a>Política de privacidade</a></label>
+      </div>
+      <button type="submit">Cadastrar</button>
+      <p class="register">Já tem uma conta? <a href="#">Faça o login</a></p>
+    </form>
+  </div>
+
 </body>
 
 </html>
