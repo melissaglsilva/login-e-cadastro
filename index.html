@@ -7,52 +7,63 @@
   <title>Document</title>
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/style.css">
+  <link rel="stylesheet" href="./src/css/responsive.css">
   <script src="https://kit.fontawesome.com/becda8fcd0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="container login">
-    <form action="#">
+  <div class="container" id="login">
+    <form action="/" method="get" id="login-form">
       <h2>Login</h2>
       <div class="input-box">
-        <input type="email" class="email" placeholder="E-mail" title="" required oninvalid="this.setCustomValidity('Campo requerido')">
+        <input type="text" name="login-email" class="login-field" placeholder="E-mail" title="">
         <i class="fa-solid fa-envelope"></i>
+        <p class="login-error"></p>
       </div>
       <div class="input-box">
-        <input type="password" class="password" placeholder="Senha" title="" required minlength="6" maxlength="20">
+        <input type="password" name="login-password" class="login-field" placeholder="Senha" title="">
         <i class="fa-solid fa-lock"></i>
+        <p class="login-error"></p>
       </div>
       <div class="wrap-info">
-        <label><input type="checkbox">Lembrar dados</label>
+        <label><input type="checkbox" name="remember-data">Lembrar dados</label>
         <a href="#">Esqueci a senha</a>
       </div>
       <button type="submit">Logar</button>
-      <p class="register">Não tem conta? <a href="#">Cadastre-se</a></p>
-    </form>
-  </div>
-  <div class="container registration">
-    <form action="#">
-      <h2>Cadastro</h2>
-      <div class="input-box">
-        <input type="text" class="full-name" placeholder="Nome completo" title="" required>
-        <i class="fa-solid fa-user"></i>
-      </div>
-      <div class="input-box">
-        <input type="email" class="email" placeholder="E-mail" title="" required>
-        <i class="fa-solid fa-envelope"></i>
-      </div>
-      <div class="input-box">
-        <input type="password" class="password" placeholder="Senha" title="" required minlength="6" maxlength="20">
-        <i class="fa-solid fa-lock"></i>
-      </div>
-      <div class="wrap-info">
-        <label><input type="checkbox">Li e concordo com a <a>Política de privacidade</a></label>
-      </div>
-      <button type="submit">Cadastrar</button>
-      <p class="register">Já tem uma conta? <a href="#">Faça o login</a></p>
+      <p class="register">Não tem conta? <a href="#" id="register-link">Cadastre-se</a></p>
     </form>
   </div>
 
+
+  <div class="container" id="registration">
+    <form action="/" id="register-form" method="get">
+      <h2>Cadastro</h2>
+      <div class="input-box">
+        <input type="text" name="full-name" placeholder="Nome completo" title="" class="register-field">
+        <i class="fa-solid fa-user"></i>
+        <p class="register-error"></p>
+      </div>
+      <div class="input-box">
+        <input type="text" name="register-email" class="register-field" placeholder="E-mail" title="">
+        <i class="fa-solid fa-envelope"></i>
+        <p class="register-error"></p>
+      </div>
+      <div class="input-box">
+        <input type="password" name="register-password" class="register-field" placeholder="Senha" title="">
+        <i class="fa-solid fa-lock"></i>
+        <p class="register-error"></p>
+      </div>
+
+      <div class=" wrap-info">
+        <label><input type="checkbox" name="police">Li e concordo com a <a>Política de privacidade</a></label>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+      <p class="register">Já tem uma conta? <a href="#" id="login-link">Faça o login</a></p>
+    </form>
+  </div>
+
+  <script src="./src/index.js"></script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(45, 105, 133) url("../image/mountain.jpg") no-repeat;
+  background: rgb(12, 73, 102) url("../image/background.jpg") no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -18,7 +18,7 @@ body {
 .container {
   width: 420px;
   border: 2px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(5px);
   box-shadow: -1px 0 10px rgba(0, 0, 0, .2);
   color: #fff;
   border-radius: 10px;
@@ -28,14 +28,14 @@ body {
 .container h2 {
   font-size: 3.6rem;
   text-align: center;
+  margin: 10px 0;
 }
 
 .input-box {
   position: relative;
-  height: 40px;
+  height: 50px;
   width: 100%;
   margin: 20px 0;
-
 }
 
 .input-box input {
@@ -62,8 +62,8 @@ body {
 .wrap-info {
   display: flex;
   justify-content: space-between;
-  font-size: 1.4rem;
-  margin: 15px 0;
+  font-size: 1.3rem;
+  padding: 15px 0;
 }
 
 .wrap-info label input {
@@ -101,7 +101,12 @@ body {
   text-decoration: underline;
 }
 
-.registration{
+#registration {
   display: none;
 }
 
+.login-error,
+.register-error {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
